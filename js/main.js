@@ -58,6 +58,7 @@ $(function() {
         // Validate nothing is empty
         if(!id || !code || !section || !note1 || !note2) {
             alert('Debe llenar todos los campos.');
+            return;
         }
 
         if(!eval1) {
