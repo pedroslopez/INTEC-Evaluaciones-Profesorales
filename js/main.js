@@ -1,3 +1,6 @@
+// Desarrollado por Pedro Lopez
+// Enero, 2018
+
 var postUrl = 'https://evaluacionp.intec.edu.do/Evaluador/GuardarFormulario';
 
 var evalYear = 2017;
@@ -105,7 +108,7 @@ $(function() {
         console.log(postData);
 
         $('#resultsTitle').html('Request for: ' + code);
-        $('#results').html(postData).removeClass('hidden');
+        $('#results').html(postData);
         
     });
 });
