@@ -1,0 +1,168 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>AutoEvaluador</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+    <body>
+    <nav class="navbar navbar-inverse" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">INTEC AutoEvaluador</a>
+        </div>
+        
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h2>AutoEvaluador</h2>
+          <p class="text-muted">La siguiente herramienta automaticamente completa la evaluacion profesoral con los parametros indicados</p>
+          <form class="form-horizontal" id="evalForm">
+            <div class="form-group">
+              <label for="inputId" class="col-sm-2 control-label">ID</label>
+              <div class="col-sm-10">
+                <input type="number" class="form-control" id="inputId" placeholder="ID/Matricula">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputCode" class="col-sm-2 control-label">Codigo</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputCode" placeholder="Ej. CBM203">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputSect" class="col-sm-2 control-label">Seccion</label>
+              <div class="col-sm-10">
+                <input type="number" class="form-control" id="inputSect" placeholder="Ej. 02">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputSect" class="col-sm-2 control-label">Puntos Profesor</label>
+              <div class="col-sm-10">
+                <label class="radio-inline">
+                  <input type="radio" name="evalRadio" id="eval1" value="1"> 1
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="evalRadio" id="eval2" value="2"> 2
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="evalRadio" id="eval3" value="3"> 3
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="evalRadio" id="eval4" value="4"> 4
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="evalRadio" id="eval5" value="5"> 5
+                </label><br/>
+                <label class="radio-inline">
+                  <input type="radio" name="evalRadio" id="eval6" value="6"> 6
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="evalRadio" id="eval7" value="7"> 7
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="evalRadio" id="eval8" value="8"> 8
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="evalRadio" id="eval9" value="9"> 9
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="evalRadio" id="eval10" value="10"> 10
+                </label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputSect" class="col-sm-2 control-label">Puntos Personal</label>
+              <div class="col-sm-10">
+                <label class="radio-inline">
+                  <input type="radio" name="evalRadioPers" id="evalPers1" value="1"> 1
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="evalRadioPers" id="evalPers2" value="2"> 2
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="evalRadioPers" id="evalPers3" value="3"> 3
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="evalRadioPers" id="evalPers4" value="4"> 4
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="evalRadioPers" id="evalPers5" value="5"> 5
+                </label><br/>
+                <label class="radio-inline">
+                  <input type="radio" name="evalRadioPers" id="evalPers6" value="6"> 6
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="evalRadioPers" id="evalPers7" value="7"> 7
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="evalRadioPers" id="evalPers8" value="8"> 8
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="evalRadioPers" id="evalPers9" value="9"> 9
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="evalRadioPers" id="evalPers10" value="10"> 10
+                </label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputNote1" class="col-sm-2 control-label">Nota Profesor</label>
+              <div class="col-sm-10">
+                <textarea rows="3" class="form-control" id="inputNote1" placeholder="Comentarios adicionales respecto el profesor de la asignatura."></textarea>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputNote2" class="col-sm-2 control-label">Nota Personal</label>
+              <div class="col-sm-10">
+                <textarea rows="3" class="form-control" id="inputNote2" placeholder="Comentarios adicionales respecto su desempeño personal."></textarea>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" id="submitBtn" class="btn btn-primary pull-right">Enviar</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="col-md-6">
+            <h3>Resultados</h3>
+            <p class="text-muted">
+              El contenido del request que debe hacer aparecerá en esta sección. 
+              Debe realizar un POST a <code>https://evaluacionp.intec.edu.do/Evaluador/GuardarFormulario</code> 
+              con el contenido generado para actualizar la evaluacion en la pagina de procesos de INTEC.
+              <br/><br/><span id="resultsTitle"></span></p>
+            <pre id="results" class="pre-scrollable">// Su evaluacion aparecera aqui</pre>
+        </div>
+        
+      </div>
+
+      <footer>
+        <p>&copy; Pedro Lopez 2018</p>
+      </footer>
+    </div> <!-- /container -->        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+        <script src="js/vendor/bootstrap.min.js"></script>
+
+        <script src="js/main.js"></script>
+    </body>
+</html>
