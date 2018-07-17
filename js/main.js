@@ -4,7 +4,7 @@
 var postUrl = 'https://evaluacionp.intec.edu.do/Evaluador/GuardarFormulario';
 
 var evalYear = 2018;
-var evalPeriod = 4;
+var evalPeriod = 2;
 
 function fillWith(str, fillChar, len, reverse) {
     var toFill = len - str.length;
