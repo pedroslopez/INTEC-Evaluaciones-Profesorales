@@ -1,10 +1,11 @@
 // Desarrollado por Pedro Lopez
 // Enero, 2018
 
+var corsBypassSrv = 'https://cors-anywhere.herokuapp.com/';
 var postUrl = 'https://evaluacionp.intec.edu.do/Evaluador/GuardarFormulario';
 
 var evalYear = 2018;
-var evalPeriod = 2;
+var evalPeriod = 4; // TODO make automatic
 
 function fillWith(str, fillChar, len, reverse) {
     var toFill = len - str.length;
@@ -108,7 +109,23 @@ $(function() {
         console.log(postData);
 
         $('#resultsTitle').html('Request for: ' + code);
-        $('#results').html(postData);
+        $('#results').html('Cargando...');
+
+        // Send post
+        $.ajax({
+            method: 'POST',
+            url: corsBypassSrv + postUrl,
+            data: postData,
+            context: document.body,
+            headers: {
+                'x-requested-with': 'AutoEval'
+            },
+            success: function(data) {
+                $('#results').html(JSON.stringify(data));
+            }
+        }).fail(function() {
+            $('#results').html('OCURRIÓ UN ERROR AL PROCESAR SU SOLICITUD.');
+        });
         
     });
 });
