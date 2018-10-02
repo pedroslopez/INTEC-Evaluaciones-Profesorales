@@ -5,7 +5,7 @@ var corsBypassSrv = 'https://cors-anywhere.herokuapp.com/';
 var postUrl = 'https://evaluacionp.intec.edu.do/Evaluador/GuardarFormulario';
 
 var evalYear = 2018;
-var evalPeriod = 4; // TODO make automatic
+var evalPeriod = 3; // TODO make automatic
 
 function fillWith(str, fillChar, len, reverse) {
     var toFill = len - str.length;
