@@ -4,8 +4,10 @@
 var corsBypassSrv = 'https://cors-anywhere.herokuapp.com/';
 var postUrl = 'https://evaluacionp.intec.edu.do/Evaluador/GuardarFormulario';
 
-var evalYear = 2018;
-var evalPeriod = 4; // TODO make automatic
+var fecha = new Date();
+var evalYear = fecha.getFullYear();
+var evalMonth = fecha.getUTCMonth() == 0 ? 12 : fecha.getUTCMonth();
+var evalPeriod = Math.ceil(evalMonth/3);
 
 function fillWith(str, fillChar, len, reverse) {
     var toFill = len - str.length;
