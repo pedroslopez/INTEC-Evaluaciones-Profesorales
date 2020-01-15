@@ -59,22 +59,16 @@ $(function() {
         var code = $('#inputCode').val();
         var section = $('#inputSect').val();
         var eval1 = $('input[name=evalRadio]:checked').val();
-        var eval2 = $('input[name=evalRadioPers]:checked').val();
         var note1 = $('#inputNote1').val();
-        var note2 = $('#inputNote2').val();
 
         // Validate nothing is empty
-        if(!id || !code || !section || !note1 || !note2) {
+        if(!id || !code || !section || !note1) {
             alert('Debe llenar todos los campos.');
             return;
         }
 
         if(!eval1) {
             eval1 = 0;
-        }
-
-        if(!eval2) {
-            eval2 = 0;
         }
 
         // Split code
@@ -87,7 +81,7 @@ $(function() {
                         + section;
 
         // Generate post data
-        var postData = 'CantRespuestas=30&CantPreguntas=32&'
+        var postData = 'CantRespuestas=17&CantPreguntas=18&'
             + 'Asignatura.Codigo=' + code 
             + '&Asignatura.CodigoCompleto=' + fullCode
             + '&Asignatura.Seccion=' + section
@@ -97,18 +91,11 @@ $(function() {
             + '&EsAdministrativo=False&EstaCompleta=N&EvalId=3';
         
         // Prof questions
-        postData += generateSerialization(23, eval1, 0, 19);
+        postData += generateSerialization(23, eval1, 0, 16);
 
         // Prof Note
-        postData += generateNoteSerialization(43, 20, note1);
+        postData += generateNoteSerialization(43, 17, note1);
 
-        // Self questions
-        postData += generateSerialization(44, eval2, 21, 30);
-
-        // Self Note
-        postData += generateNoteSerialization(54, 31, note2);
-
-        
         // Show request message
         console.log(postData);
 
