@@ -32,9 +32,9 @@ function generateSerialization(questionId, eval, startIndex, endIndex) {
 
         postData += fieldName + 'Id=' + questionId
             + fieldName + 'PreguntaId=' + questionId
-            + fieldName + 'Opcionid=' + (parseInt(eval)+1)
+            + fieldName + 'Opcionid=' + (parseInt(eval))
             + fieldName + 'Type=Close'
-            + fieldName + 'PreguntaId=' + (parseInt(eval)+1);
+            + fieldName + 'PreguntaId=' + (parseInt(eval));
 
         questionId++;
     }
