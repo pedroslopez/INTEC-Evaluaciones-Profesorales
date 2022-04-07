@@ -1,7 +1,7 @@
 // Desarrollado por Pedro Lopez
 // Enero, 2018
 
-var corsBypassSrv = 'https://cors-anywhere.herokuapp.com/';
+var corsBypassSrv = 'https://corsanywhere.herokuapp.com/';
 var postUrl = 'https://evaluacionp.intec.edu.do/Evaluador/GuardarFormulario';
 
 var fecha = new Date();
