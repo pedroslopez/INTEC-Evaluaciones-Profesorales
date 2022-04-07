@@ -81,20 +81,20 @@ $(function() {
                         + section;
 
         // Generate post data
-        var postData = 'CantRespuestas=17&CantPreguntas=18&'
+        var postData = 'CantRespuestas=20&CantPreguntas=21&'
             + 'Asignatura.Codigo=' + code 
             + '&Asignatura.CodigoCompleto=' + fullCode
             + '&Asignatura.Seccion=' + section
             + '&Asignatura.Ano=' + evalYear
             + '&Asignatura.Periodo=' + evalPeriod
             + '+&Asignatura.Profesor.Id=0&Evaluador.Id=' + id
-            + '&EsAdministrativo=False&EstaCompleta=N&EvalId=3';
+            + '&EsAdministrativo=False&EstaCompleta=N&EvalId=21';
         
         // Prof questions
-        postData += generateSerialization(23, eval1, 0, 16);
+        postData += generateSerialization(523, eval1, 0, 15);
 
         // Prof Note
-        postData += generateNoteSerialization(43, 17, note1);
+        postData += generateNoteSerialization(545, 16, note1);
 
         // Show request message
         console.log(postData);
