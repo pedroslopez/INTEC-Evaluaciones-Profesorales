@@ -91,10 +91,10 @@ $(function() {
             + '&EsAdministrativo=False&EstaCompleta=N&EvalId=21';
         
         // Prof questions
-        postData += generateSerialization(523, eval1, 0, 15);
+        postData += generateSerialization(523, eval1, 0, 19);
 
         // Prof Note
-        postData += generateNoteSerialization(545, 16, note1);
+        postData += generateNoteSerialization(545, 20, note1);
 
         // Show request message
         console.log(postData);
